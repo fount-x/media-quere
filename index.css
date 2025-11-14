@@ -1,0 +1,63 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.box {
+  height: 400px;
+  background-color: green;
+  padding: 20px;
+  transition: 0.5s ease-in;
+
+  &:hover {
+  cursor: pointer;
+  background-color: blueviolet;
+  border-radius: 20px;
+}
+
+&:active{
+    color: black;
+    background-color: red;
+    font-size: 50px;
+}
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .box {
+    background-color: orange;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .box {
+    background-color: purple;
+  }
+}
+
+@keyframes fountain{
+    from{
+        opacity: 1;
+        scale: 1;
+    }
+    to{
+        opacity: 0.2;
+        scale: 1.1;
+    }
+}
